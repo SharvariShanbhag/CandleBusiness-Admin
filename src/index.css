@@ -1,0 +1,97 @@
+/* Basic Resets */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif; /* A clean, modern font */
+  background-color: #FFE5EC; /* Lightest pink from palette */
+  color: #333;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Importing a feminine/aesthetic font for the brand name */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+/* Color Palette Variables */
+:root {
+  --pink-dark: #FF0099;
+  --pink-medium-dark: #FF3AAE;
+  --pink-medium-light: #FF73C3;
+  --pink-light: #FFACD8;
+  --pink-very-light: #FFE5EC;
+  --text-dark: #333;
+  --text-light: #fff;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.2);
+}
+
+/* General Styling for Aesthetic */
+button {
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px var(--shadow-light);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--shadow-medium);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea {
+  padding: 10px 15px;
+  border: 1px solid var(--pink-light);
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 300px;
+  background-color: var(--pink-very-light);
+  color: var(--text-dark);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--pink-medium-dark);
+  box-shadow: 0 0 0 3px var(--pink-light);
+}
+
+/* Card Styling */
+.card {
+  background-color: var(--pink-very-light);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px var(--shadow-medium);
+  padding: 20px;
+  margin: 15px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px var(--shadow-medium);
+}
+
+/* Specific styling for the brand name in Navbar */
+.brand-name-font {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.2rem;
+  color: var(--pink-dark);
+  text-shadow: 1px 1px 2px var(--pink-medium-light);
+}
