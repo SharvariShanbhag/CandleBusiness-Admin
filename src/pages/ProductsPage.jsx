@@ -1,4 +1,3 @@
-// src/pages/ProductsPage.jsx
 import React, { useState, useEffect, useCallback } from 'react';
 import {
   getAllProducts,

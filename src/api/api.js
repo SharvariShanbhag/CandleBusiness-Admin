@@ -52,7 +52,6 @@ export const deleteUser = (userId) => api.delete(`/user/delete/${userId}`); // A
 export const createCategory = (formData) => api.post('/category/create', formData, {
   headers: { 'Content-Type': 'multipart/form-data' }, // Important for file uploads
 });
-// Ensure this getAllCategories uses the 'api' instance defined above
 export const getAllCategories = () => api.get('/category/getAllCategories');
 export const getCategoryById = (categoryId) => api.get(`/category/getCategoryByID/${categoryId}`);
 export const updateCategory = (categoryId, formData) => api.put(`/category/updateCategory/${categoryId}`, formData, {
@@ -64,10 +63,15 @@ export const deleteCategory = (categoryId) => api.delete(`/category/deleteCatego
 export const createProduct = (formData) => api.post('/product/create', formData, {
   headers: { 'Content-Type': 'multipart/form-data' }, // Important for file uploads
 });
-// Ensure this getAllProducts uses the 'api' instance defined above
-export const getAllProducts = () => api.get('/product/getAllProducts');
+
+// ******************************************************************
+// CRITICAL FIX: Changed '/product/getAllProducts' to '/product/products'
+// to match your backend route definition.
+export const getAllProducts = () => api.get('/product/products');
+// ******************************************************************
+
 export const getProductById = (productId) => api.get(`/product/getProductById/${productId}`);
-export const updateProduct = (productId, formData) => api.put('/product/updateProduct/${productId}', formData, {
+export const updateProduct = (productId, formData) => api.put(`/product/updateProduct/${productId}`, formData, {
   headers: { 'Content-Type': 'multipart/form-data' }, // Important for file uploads
 });
 export const deleteProduct = (productId) => api.delete(`/product/deleteProduct/${productId}`);
